@@ -3,7 +3,7 @@
 StdID | Name
 ------------ | -------------
 **62367** | **Syed Munawwar Ali Shah** <!--this is the group leader in bold-->
-62324 | Uzair hasan
+62324 | Uzair Hasan
 <!-- Replace name and student ids with acutally group member names and ids-->
 
 ## Description ##
