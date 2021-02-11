@@ -13,7 +13,7 @@ StdID | Name
 
 ### 3. NFA to DFA ###
 
-#NFA STATES     #DFA STATES     #A      #B      #0      #1      #-      #.      #@
+# NFA STATES #    
 
 ### 4. Code ###
 static void Main(string[] args)
