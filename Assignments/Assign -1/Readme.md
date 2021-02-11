@@ -9,6 +9,8 @@ StdID | Name
 
 ### 2. RE to NFA ###
 
+![nfa](https://user-images.githubusercontent.com/62952262/107605575-708ff780-6be8-11eb-8bcd-d4549246ef23.png)
+
 ### 3. NFA to DFA ###
 
 
