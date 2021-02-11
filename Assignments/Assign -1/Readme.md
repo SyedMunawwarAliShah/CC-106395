@@ -5,11 +5,10 @@ StdID | Name
 62324 | Uzair Hasan
 
 ### 1. Regular expression ###
-![nfa](https://user-images.githubusercontent.com/62952262/107611897-e05aae00-6bf9-11eb-8bb3-753727cafa10.png)
 
 ### 2. RE to NFA ###
 
-![nfa](https://user-images.githubusercontent.com/62952262/107605575-708ff780-6be8-11eb-8bcd-d4549246ef23.png)
+![nfa](https://user-images.githubusercontent.com/62952262/107611897-e05aae00-6bf9-11eb-8bb3-753727cafa10.png)
 
 ### 3. NFA to DFA ###
 
