@@ -5,7 +5,7 @@ StdID | Name
 62324 | Uzair Hasan
 
 ### 1. Regular expression ###
-
+(a+b)(a+b+0+1+.+_)*@(a+b+.)*
 
 ### 2. RE to NFA ###
 
