@@ -8,7 +8,6 @@ StdID | Name
 
 
 ### 2. RE to NFA ###
-![WhatsApp Image 2021-02-11 at 10 08 01 AM](https://user-images.githubusercontent.com/51967342/107605024-c057d880-6c53-11eb-93b0-1a26a04ebad7.jpeg)
 
 ### 3. NFA to DFA ###
 
