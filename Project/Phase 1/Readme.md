@@ -13,8 +13,35 @@ Mini C
 ```
 int main(){
 
+} 
+```
+## Example of for loop constructs ##
+```
+for(int i=0;i<3;i++)
+{
+   printf("Welcome to CC Project");
 }
 ```
+## Example of if condition constructs ##
+```
+if (number < 0) 
+{
+   printf("You entered wrong no");
+}
+```
+## Example of while loop constructs ##
+```
+ while( a < 20 ) 
+{
+   printf("value of a: %d\n", a);
+   a++;
+}   
+```
+## Example of arrayy= constructs ##
+```
+int marks[5] = {19, 10, 8, 17, 9}
+```
+
 
 ## Lexical Specification##
 IF
