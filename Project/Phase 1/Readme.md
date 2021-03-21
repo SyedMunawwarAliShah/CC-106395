@@ -37,7 +37,7 @@ if (number < 0)
    a++;
 }   
 ```
-## Example of arrayy= constructs ##
+## Example of array constructs ##
 ```
 int marks[5] = {19, 10, 8, 17, 9}
 ```
