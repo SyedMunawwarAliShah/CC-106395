@@ -43,7 +43,7 @@ int marks[5] = {19, 10, 8, 17, 9}
 ```
 
 
-## Lexical Specification##
+## Lexical Specification ##
 
 ```
 1.program →declaration-list
