@@ -83,6 +83,21 @@ int marks[5] = {19, 10, 8, 17, 9}
 34.neg-num→-value
 35.value →INT_NUM|FLOAT_NUM
 ```
+## token in scanner
+```
+The Keywords of the language are the following:voidint      
+float      if     elsewhile      for      return     brea
 
+Special symbols are the following:
+&&||<=>===<      >     !==      (      ){      }     ;,      .      +     -*      /      /*      */
+
+Other tokens are INT_NUM, FLOAT_NUM, ID, defined by the following regular expressions:
+digit     =      [0-9]
+letter    =      [a-zA-Z]
+INT_NUM   =      [+|-]?[digit]+
+FLOAT_NUM =      [+|-]?[digit]+. [digit]+
+ID        =      [letter]+[digit | letter | _]*   
+
+```
 ## Language CFG ##
 PROG -> LIB FUNCTION | ;
