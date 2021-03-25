@@ -44,6 +44,8 @@ int marks[5] = {19, 10, 8, 17, 9}
 
 
 ## Lexical Specification##
+
+```
 1.program →declaration-list
 2.declaration-list → declaration-list declaration | declaration
 3.declaration → var-declaration | fun-declaration
@@ -80,7 +82,7 @@ int marks[5] = {19, 10, 8, 17, 9}
 33.pos-num→+value | value
 34.neg-num→-value
 35.value →INT_NUM|FLOAT_NUM
-
+```
 
 ## Language CFG ##
 PROG -> LIB FUNCTION | ;
