@@ -7,7 +7,7 @@ StdID | Name
 
 ## Language Selected ##
 
-Mini C 
+Mini Pascal
 
 ## Example of main constructs ##
 ```
