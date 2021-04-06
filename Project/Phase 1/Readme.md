@@ -46,58 +46,59 @@ int marks[5] = {19, 10, 8, 17, 9}
 ## Lexical Specification ##
 
 ```
-1.program →declaration-list
-2.declaration-list → declaration-list declaration | declaration
-3.declaration → var-declaration | fun-declaration
-4.var-declaration → type-specifier ID; 
-5.type-specifier → int| void| float
-6.fun-declaration → type-specifier ID( params ) compound-stmt
-7.params → param-list |void| λ
-8.param-list → param-list, param | param
-9.param → type-specifier ID
-10.compound-stmt → {local-declarations statement-list}
-11.local-declarations →local-declarations var-declaration | λ
-12.statement-list → statement-list statement | λ
-13.statement → expression-stmt | compound-stmt | selection-stmt | iteration-stmt | jump-stmt
-14.expression-stmt → expression ;| ;
-15.selection-stmt → if(expression )statement 
-      |if ( expression)statement elsestatement
-16.iteration-stmt →while-statement | for-statement
-17.while-statement→ while ( expression )statement
-18.for-statement →for(expression;expression;expression)statement
-19.jump-stmt → return;| return expression;| break ;
-20.expression → id-assign=expression | simple-expression
-21.id-assign→ID
-22.simple-expression   → additive-expression relop additive-expression | additive-expression
-23.relop →<= | < | > | >= | == | !=|&&| ||
-24.additive-expression  → additive-expression addop term | term
-25.addop → + | -
-26.term → term mulop factor | factor
-27.mulop → *| /
-28.factor →(expression ) | id-assign| call | num
-29.call → ID(args )
-30.args → arg-list | λ
-31.arg-list → arg-list , expression | expression
-32.num →pos-num|neg-num
-33.pos-num→+value | value
-34.neg-num→-value
-35.value →INT_NUM|FLOAT_NUM
+<id> ::= <letter> { <letter> | <digit> | "_" }
+<literal> ::= <integer literal> | <real literal> | <string literal>
+<integer literal> ::= <digits>
+<digits> ::= <digit> { <digit> }
+<real literal> ::= <digits> "." <digits> [ "e" [ <sign> ] <digits>]
+<string literal> ::= "\"" { < a char or escape char > } "\""
+<letter> ::= a | b | c | d | e | f | g | h | i | j | k | l | m | n | o |
+p | q | r | s | t | u | v | w | x | y | z | A | B | C |
+D | E | F | G | H | I | J | K | L | M | N | O | P
+| Q | R | S | T | U | V | W | X | Y | Z
+<digit> ::= 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
+<special symbol or keyword> ::= "+" | "-" | "*" | "%" | "=" | "<>" | "<" | ">" | "<=" | ">=" |
+"(" | ")" | "[" | "]" | ":=" | "." | "," | ";" | ":" | "or" |
+"and" | "not" | "if" | "then" | "else" | "of" | "while" | "do" |
+"begin" | "end" | "var" | "array" | "procedure" |
+"function" | "program" | "assert"
+<predefined id> ::= "Boolean" | "false" | "integer" | "read" | "real" | "size" | "string" | "true" | "writeln"
 ```
-## token in scanner
-```
-The Keywords of the language are the following:voidint      
-float      if     elsewhile      for      return     brea
 
-Special symbols are the following:
-&&||<=>===<      >     !==      (      ){      }     ;,      .      +     -*      /      /*      */
-
-Other tokens are INT_NUM, FLOAT_NUM, ID, defined by the following regular expressions:
-digit     =      [0-9]
-letter    =      [a-zA-Z]
-INT_NUM   =      [+|-]?[digit]+
-FLOAT_NUM =      [+|-]?[digit]+. [digit]+
-ID        =      [letter]+[digit | letter | _]*   
-
-```
 ## Language CFG ##
-PROG -> LIB FUNCTION | ;
+```
+<program> ::= "program" <id> ";" <block> "."
+<declaration> ::= "var" <id> { , <id> } ":" <type> |
+"procedure" <id> "(" parameters ")" ";" <block> |
+"function" <id> "(" parameters ")" ":" <type> ";" <block>
+<parameters> ::= [ "var" ] <id> ":" <type> { "," [ "var" ] <id> ":" <type> } | <empty>
+<type> ::= <simple type> | <array type>
+<array type> ::= "array" "[" [<integer expr>] "]" "of" <simple type>
+<simple type> ::= <type id>
+<block> ::= "begin" <statement> { ";" <statement> } [ ";" ] "end"
+<statement> ::= <simple statement> | <structured statement> | <declaration>
+<empty> ::=
+<simple statement> ::= <assignment statement> | <call> | <return statement> |
+< read statement> | <write statement> | <assert statement>
+<assignment statement> ::= <variable> ":=" <expr>
+<call> ::= <id> "(" <arguments> ")"
+<arguments> ::= expr { "," expr } | <empty>
+<return statement> ::= "return" [ expr ]
+<read statement> ::= "read" "(" <variable> { "," <variable> } ")"
+<write statement> ::= "writeln" "(" <arguments> ")"
+<assert statement> ::= "assert" "(" <Boolean expr> ")"
+<structured statement> ::= <block> | <if statement> | <while statement>
+<if statement> ::= "if" <Boolean expr> "then" <statement> |
+"if" <Boolean expr> "then" <statement> "else" <statement>
+<while statement> ::= "while" <Boolean expr> "do" <statement> 
+<expr> ::= <simple expr> |
+<simple expr> <relational operator> <simple expr>
+<simple expr> ::= [ <sign> ] <term> { <adding operator> <term> }
+<term> ::= <factor> { <multiplying operator> <factor> }
+<factor> ::= <call> | <variable> | <literal> | "(" <expr> ")" | "not" <factor> | < factor> "." "size"
+<variable> ::= <variable id> [ "[" <integer expr> "]" ]
+<relational operator> ::= "=" | "<>" | "<" | "<=" | ">=" | ">"
+<sign> ::= "+" | "-"
+<adding operator> ::= "+" | "-" | "or"
+<multiplying operator> ::= "*" | "/" | "%" | "and" 
+```
