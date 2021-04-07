@@ -9,37 +9,42 @@ StdID | Name
 
 Mini Pascal
 
-## Example of main constructs ##
+## Example of function ##
 ```
-int main(){
+Function Func_Name(params...) : Return_Value;
+```
+## Example of variable decleraion ##
+```
+var
+variable_list : type;
+```
+## Example of pascal statements ##
+```
+readln (a, b, c);
+s := (a + b + c)/2.0;
+area := sqrt(s * (s - a)*(s-b)*(s-c));
+writeln(area); 
+```
+## Example of for loop ##
+```
+ program forLoop;
+var
+   a: integer;
 
-} 
+begin
+   for a := 10  to 20 do
+   
+   begin
+      writeln('value of a: ', a);
+   end;
+end.  
 ```
-## Example of for loop constructs ##
+## Example of array ##
 ```
-for(int i=0;i<3;i++)
-{
-   printf("Welcome to CC Project");
-}
-```
-## Example of if condition constructs ##
-```
-if (number < 0) 
-{
-   printf("You entered wrong no");
-}
-```
-## Example of while loop constructs ##
-```
- while( a < 20 ) 
-{
-   printf("value of a: %d\n", a);
-   a++;
-}   
-```
-## Example of array constructs ##
-```
-int marks[5] = {19, 10, 8, 17, 9}
+type
+   vector = array [ 1..25] of real;
+var
+   velocity: vector;
 ```
 
 
