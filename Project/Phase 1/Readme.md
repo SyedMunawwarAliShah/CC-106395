@@ -69,30 +69,6 @@ D | E | F | G | H | I | J | K | L | M | N | O | P
 "function" | "program" | "assert"
 <predefined id> ::= "Boolean" | "false" | "integer" | "read" | "real" | "size" | "string" | "true" | "writeln"
 
-
-
-
-
-
-
-<constant> ::=	<integer constant> | <character constant> | <constant identifier>
-<constant identifier> ::=	<identifier>
-<identifier> ::=	<letter> { <letter or digit> }
-<letter or digit> ::=	<letter> | <digit>
-<integer constant> ::=	<digit> { <digit> }
-<character constant> ::=	'< any character other than ' >'  |  ''''
-<letter> ::=	a | b | c | d | e | f | g | h | i | j | k | l | m | n | o |
-p | q | r | s | t | u | v | w | x | y | z | A | B | C |
-D | E | F | G | H | I | J | K | L | M | N | O | P
-| Q | R | S | T | U | V | W | X | Y | Z
-<digit> ::=	0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
-<special symbol> ::=	+ | - | * | = | <> | < | > | <= | >= |
-( | ) | [ | ] | := | . | , | ; | : | .. | div | or |
-and | not | if | then | else | of | while | do |
-begin | end | read | write | var | array |
-procedure | program
-<predefined identifier> ::=	integer | Boolean | true | false
-
 ```
 
 ## Language CFG ##
