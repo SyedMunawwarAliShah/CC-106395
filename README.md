@@ -8,3 +8,8 @@ StdID | Name
 
 ## Description ##
 This repository contains assignments and project submitted to CC course offered in Spring 2021 at PafKiet.
+
+## Project Phases ##
+### 1. Language selection ###
+### 2. Implementation of Flex ###
+### 3. Yoda ###
