@@ -100,14 +100,10 @@ Many languages we have seen but couldn't understand the lexical grammer then we 
 ### Problem 2: I don't know how to use flex ###
 When we completed our phase 1 which is language selection that after we have to use that language in a flex and it would be difficult for us because we don't know how to use flex and run. We searched on a google and saw a videos regarding flex problems and then we have got the concept about the flex.
 
-### Problem 3: What is parser i don't know how to use it ###
+### Problem 3: What is yacc i don't know how to use it ###
+
 
 ## References ##
-- Mention and add [links](https://guides.github.com/features/mastering-markdown/), references, books, research papers, code samples, you used to get help in the project.
-- Use bullets like this.
-- Mention all references. Plagiarism will not be tolerated.
-- You see markdown is not that difficult.
-- You are CS students not some tom harry from BBA SHE-B-A :-).
-- You can and must learn to use markdown and Github. 
-- All future project development will be down in something similar to GITHUB
+- (https:google.com), references, books, code samples.
+- https:youtube.com
 
