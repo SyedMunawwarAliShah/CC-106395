@@ -101,7 +101,7 @@ Many languages we have seen but couldn't understand the lexical grammer then we 
 When we completed our phase 1 which is language selection that after we have to use that language in a flex and it would be difficult for us because we don't know how to use flex and run. We searched on a google and saw a videos regarding flex problems and then we have got the concept about the flex.
 
 ### Problem 3: What is yacc i don't know how to use it ###
-
+We tried a sample code in yacc but it coultn't run the file.
 
 ## References ##
 - (https:google.com), references, books, code samples.
