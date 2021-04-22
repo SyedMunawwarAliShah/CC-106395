@@ -5,35 +5,102 @@
 StdID | Name
 ------------ | -------------
 **62367** | **Syed Munawwar Ali Shah** <!--this is the group leader in bold-->
-54321 | Uzair Hasan
+62324 | Uzair Hasan
 <!-- Replace name and student ids with acutally group member names and ids-->
 ## Project Description ##
-In this project we made a compiler construction and divided into phases. Firstly we select a language, secondly lexical grammer implement in a flex and lastly parser will be used in the last phase.
+In this project we made a compiler construction and divided into phases. Firstly we select a language, secondly lexical grammer implement in a flex and lastly parser will be made in the last phase.
 
 ## Sample Language Used ##
-Replace this text with the desription of what was your sample language. You may include some code examples of loops, if and simple statements 
-```C++
-#include <some code examples.h>
-printf("This is a loop example!");
-for(int i=0; i<10 ; i++){
-    printf("Please Allah Forgive me. I cheated in exam while fasting!");
-}
+We selected a mini Pascal for the compiler. Here are some code examples
+```
+ program forLoop;
+var
+   a: integer;
+
+begin
+   for a := 10  to 20 do
+   
+   begin
+      writeln('value of a: ', a);
+   end;
+end.  
+```
+```
+type
+   vector = array [ 1..25] of real;
+var
+   velocity: vector;
 ```
 ### Lexical Specification ###
-Replace this text with a complete lexical specification of your selected programming language.
+```
+<id> ::= <letter> { <letter> | <digit> | "_" }
+<literal> ::= <integer literal> | <real literal> | <string literal>
+<integer literal> ::= <digits>
+<digits> ::= <digit> { <digit> }
+<real literal> ::= <digits> "." <digits> [ "e" [ <sign> ] <digits>]
+<string literal> ::= "\"" { < a char or escape char > } "\""
+<letter> ::= a | b | c | d | e | f | g | h | i | j | k | l | m | n | o |
+p | q | r | s | t | u | v | w | x | y | z | A | B | C |
+D | E | F | G | H | I | J | K | L | M | N | O | P
+| Q | R | S | T | U | V | W | X | Y | Z
+<digit> ::= 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
+<special symbol or keyword> ::= "+" | "-" | "*" | "%" | "=" | "<>" | "<" | ">" | "<=" | ">=" |
+"(" | ")" | "[" | "]" | ":=" | "." | "," | ";" | ":" | "or" |
+"and" | "not" | "if" | "then" | "else" | "of" | "while" | "do" |
+"begin" | "end" | "var" | "array" | "procedure" |
+"function" | "program" | "assert"
+<predefined id> ::= "Boolean" | "false" | "integer" | "read" | "real" | "size" | "string" | "true" | "writeln"
 
+```
 ### Grammar ###
-Replace this text with a complete GRAMMAR of your selected language
+```
+<program> ::= "program" <id> ";" <block> "."
+<declaration> ::= "var" <id> { , <id> } ":" <type> |
+"procedure" <id> "(" parameters ")" ";" <block> |
+"function" <id> "(" parameters ")" ":" <type> ";" <block>
+<parameters> ::= [ "var" ] <id> ":" <type> { "," [ "var" ] <id> ":" <type> } | <empty>
+<type> ::= <simple type> | <array type>
+<array type> ::= "array" "[" [<integer expr>] "]" "of" <simple type>
+<simple type> ::= <type id>
+<block> ::= "begin" <statement> { ";" <statement> } [ ";" ] "end"
+<statement> ::= <simple statement> | <structured statement> | <declaration>
+<empty> ::=
+<simple statement> ::= <assignment statement> | <call> | <return statement> |
+< read statement> | <write statement> | <assert statement>
+<assignment statement> ::= <variable> ":=" <expr>
+<call> ::= <id> "(" <arguments> ")"
+<arguments> ::= expr { "," expr } | <empty>
+<return statement> ::= "return" [ expr ]
+<read statement> ::= "read" "(" <variable> { "," <variable> } ")"
+<write statement> ::= "writeln" "(" <arguments> ")"
+<assert statement> ::= "assert" "(" <Boolean expr> ")"
+<structured statement> ::= <block> | <if statement> | <while statement>
+<if statement> ::= "if" <Boolean expr> "then" <statement> |
+"if" <Boolean expr> "then" <statement> "else" <statement>
+<while statement> ::= "while" <Boolean expr> "do" <statement> 
+<expr> ::= <simple expr> |
+<simple expr> <relational operator> <simple expr>
+<simple expr> ::= [ <sign> ] <term> { <adding operator> <term> }
+<term> ::= <factor> { <multiplying operator> <factor> }
+<factor> ::= <call> | <variable> | <literal> | "(" <expr> ")" | "not" <factor> | < factor> "." "size"
+<variable> ::= <variable id> [ "[" <integer expr> "]" ]
+<relational operator> ::= "=" | "<>" | "<" | "<=" | ">=" | ">"
+<sign> ::= "+" | "-"
+<adding operator> ::= "+" | "-" | "or"
+<multiplying operator> ::= "*" | "/" | "%" | "and" 
+```
 
 ## Problems Faced ##
-Replace this text with the explaination of the problems you faced in the project, and how you resolved them. Again you can give each of your problems a heading of level 3.
+In this project we dont understand how to made a compiler and their phases. Than we searched on a google and youtube to find the solution of compiler construction.
+Some problems are listed below
 
-### Problem 1: I don't know how to Code###
-Transfer to yourself to social sciences department. Blah blah blah. This is an example. Replace it with your own problem description and how you resolved it. 
-Don't just blindly copy paste this report. This is a sample template file. 
+### Problem 1: I don't know how to select language and find a lexical specification ###
+Many languages we have seen but couldn't understand the lexical grammer then we saw a mini pascal language their lexical specification are visible and clear to understand thats why we choosed this language.
 
-### Problem 2: My Parents forced me for a degree ###
-If you were not able to convince your parents not to force you for degree and now you are doing it for them then do it with your best effort and not half heartedly. There is no point wasting this time with finding a loop hole here and there and passing courses without actually learning anything.  
+### Problem 2: I don't know how to use flex ###
+When we completed our phase 1 which is language selection that after we have to use that language in a flex and it would be difficult for us because we don't know how to use flex and run. We searched on a google and saw a videos regarding flex problems and then we have got the concept about the flex.
+
+### Problem 3: What is parser i don't know how to use it ###
 
 ## References ##
 - Mention and add [links](https://guides.github.com/features/mastering-markdown/), references, books, research papers, code samples, you used to get help in the project.
