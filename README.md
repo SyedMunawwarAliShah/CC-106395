@@ -1,32 +1,16 @@
-# CC 106395 Spring 2021: Course Repository #
+
+# CC 106395: Compiler Construction #
+<!-- Replace XX with your course ID-->
 ### PROJECT MEMBERS ###
 StdID | Name
 ------------ | -------------
 **62367** | **Syed Munawwar Ali Shah** <!--this is the group leader in bold-->
-62324 | Uzair Hasan
-<!-- Replace name and student ids with acutally group member names and ids-->
-
-## Description ##
-This repository contains assignments and project submitted to CC course offered in Spring 2021 at PafKiet.
-
-## Project Phases ##
-### 1. Language selection ###
-### 2. Implementation of Flex ###
-### 3. Yoda ###
-
-
-#DM 1033XX: REPLACE WITH YOUR PROJECT TITLE#
-<!-- Replace XX with your course ID-->
-###PROJECT MEMBERS###
-StdID | Name
------------- | -------------
-**12345** | **Amjad Majid** <!--this is the group leader in bold-->
-54321 | Sajid Rashid
+54321 | Uzair Hasan
 <!-- Replace name and student ids with acutally group member names and ids-->
 ## Project Description ##
-Replace this text with the description of your project. Tell what the project was about. What you aimed to deliver in the project.
+In this project we made a compiler construction and divided into phases. Firstly we select a language, secondly lexical grammer implement in a flex and lastly parser will be used in the last phase.
 
-##Sample Language Used ##
+## Sample Language Used ##
 Replace this text with the desription of what was your sample language. You may include some code examples of loops, if and simple statements 
 ```C++
 #include <some code examples.h>
@@ -35,23 +19,23 @@ for(int i=0; i<10 ; i++){
     printf("Please Allah Forgive me. I cheated in exam while fasting!");
 }
 ```
-###Lexical Specification###
+### Lexical Specification ###
 Replace this text with a complete lexical specification of your selected programming language.
 
-###Grammar###
+### Grammar ###
 Replace this text with a complete GRAMMAR of your selected language
 
-##Problems Faced##
+## Problems Faced ##
 Replace this text with the explaination of the problems you faced in the project, and how you resolved them. Again you can give each of your problems a heading of level 3.
 
-###Problem 1: I don't know how to Code###
+### Problem 1: I don't know how to Code###
 Transfer to yourself to social sciences department. Blah blah blah. This is an example. Replace it with your own problem description and how you resolved it. 
 Don't just blindly copy paste this report. This is a sample template file. 
 
-###Problem 2: My Parents forced me for a degree###
+### Problem 2: My Parents forced me for a degree ###
 If you were not able to convince your parents not to force you for degree and now you are doing it for them then do it with your best effort and not half heartedly. There is no point wasting this time with finding a loop hole here and there and passing courses without actually learning anything.  
 
-##References##
+## References ##
 - Mention and add [links](https://guides.github.com/features/mastering-markdown/), references, books, research papers, code samples, you used to get help in the project.
 - Use bullets like this.
 - Mention all references. Plagiarism will not be tolerated.
