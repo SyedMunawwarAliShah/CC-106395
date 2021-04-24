@@ -111,6 +111,8 @@ https://user-images.githubusercontent.com/51967342/115966500-43948500-a547-11eb-
 
 
 ## References ##
-- (https:google.com), references, papers, code samples.
-- https:youtube.com
+- www.google.com
+- www.youtube.com
+- www.geeksforgeeks.com
+- www.javapoint.com
 
